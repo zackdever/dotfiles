@@ -1,0 +1,14 @@
+[user]
+	name = Zack Dever
+  email = zackdever@gmail.com
+[github]
+  user = zever
+[core]
+  editor = vim 
+  excludesfile = /Users/dp/.gitignore_global
+[help]
+  autocorrect = -1
+[color]
+  ui = true
+[credential]
+	helper = osxkeychain
