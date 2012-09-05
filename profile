@@ -1,8 +1,6 @@
 ### path ##################################################
-# use local node packages
 export PATH="./node_modules/.bin:$PATH"
 export PATH="$PATH:/opt/android-sdk-macosx/tools:/opt/android-sdk-macosx/platform-tools"
-
 # check /usr/local/bin before /usr/bin
 # global could be overridden http://stackoverflow.com/q/5364614/962091
 export PATH="/usr/local/bin:$PATH"
@@ -14,7 +12,7 @@ alias ga="git add"
 alias gs="git status"
 alias gd="git diff"
 alias gc="git commit -m"
-alias gca="git commit -ma"
+alias gca="git commit -am"
 alias gpush="git push"
 alias gpull="git push"
 alias gpushtags="git push --tags"
