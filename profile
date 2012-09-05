@@ -30,4 +30,8 @@ done
 #source ~/.kinobi
 if [ -f ~/.kinobi ]; then . ~/.kinobi; fi
 
+if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi
+
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+
+export PATH="$PATH:/opt/android-sdk-macosx/tools:/opt/android-sdk-macosx/platform-tools"
