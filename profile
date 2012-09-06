@@ -14,11 +14,10 @@ alias gd="git diff"
 alias gc="git commit -m"
 alias gca="git commit -am"
 alias gpush="git push"
-alias gpull="git push"
+alias gpull="git pull"
 alias gpushtags="git push --tags"
 
 alias ..='cd ..'
-alias .='pwd'
 alias l='ls -l'
 alias la='ls -la'
 alias icanhaz='brew install'
