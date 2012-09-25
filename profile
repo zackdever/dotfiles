@@ -4,6 +4,7 @@ export PATH="$PATH:/opt/android-sdk-macosx/tools:/opt/android-sdk-macosx/platfor
 # check /usr/local/bin before /usr/bin
 # global could be overridden http://stackoverflow.com/q/5364614/962091
 export PATH="/usr/local/bin:$PATH"
+export PYTHONPATH="$PYTHONPATH:$(brew --prefix)/lib/python2.7/site-packages"
 
 ### alias #################################################
 # git
@@ -11,8 +12,8 @@ alias git="hub"
 alias ga="git add"
 alias gs="git status"
 alias gd="git diff"
-alias gc="git commit -m"
-alias gca="git commit -am"
+alias gc="git commit"
+alias gca="git commit -a"
 alias gpush="git push"
 alias gpull="git pull"
 alias gpushtags="git push --tags"
@@ -21,6 +22,7 @@ alias ..='cd ..'
 alias l='ls -l'
 alias la='ls -la'
 alias icanhaz='brew install'
+alias ppj='python -mjson.tool'
 
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
