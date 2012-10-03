@@ -12,3 +12,5 @@
   ui = true
 [credential]
   helper = osxkeychain
+[merge]
+	tool = vimdiff
