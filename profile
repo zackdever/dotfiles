@@ -24,6 +24,7 @@ alias l='ls -l'
 alias la='ls -la'
 alias icanhaz='brew install'
 alias ppj='python -mjson.tool'
+alias stripformat='pbpaste | pbcopy'
 
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
