@@ -4,7 +4,11 @@ export PATH="$PATH:/opt/android-sdk-macosx/tools:/opt/android-sdk-macosx/platfor
 # check /usr/local/bin before /usr/bin
 # global could be overridden http://stackoverflow.com/q/5364614/962091
 export PATH="/usr/local/bin:$PATH"
+export PATH=/usr/local/share/python:$PATH
 export PYTHONPATH="$PYTHONPATH:$(brew --prefix)/lib/python2.7/site-packages"
+
+# virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
 
 ### alias #################################################
 # git
