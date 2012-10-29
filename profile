@@ -14,7 +14,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 # git
 alias git="hub"
 alias ga="git add"
-alias gs="git status"
+alias gs="git status -sb"
 alias gd="git diff"
 alias gc="git commit -v"
 alias gca="git commit -a -v"
