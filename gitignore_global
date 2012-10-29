@@ -24,8 +24,9 @@
 # Logs and databases #
 ######################
 *.log
-*.sql
+#*.sql
 *.sqlite
+*.db
 
 # OS generated files #
 ######################
