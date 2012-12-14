@@ -18,15 +18,15 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " my Bundles here ---------------------
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'zever/vim-colors-solarized'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'ervandew/supertab'
-Bundle 'fholgado/minibufexpl.vim'
 Bundle 'fs111/pydoc.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'guileen/vim-node'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'mattn/zencoding-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'mitechie/pyflakes-pathogen'
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -57,13 +57,19 @@ filetype plugin indent on " required!
 " basics
 set encoding=utf-8
 set laststatus=2   " always show status bar
-"set t_Co=256       " paint with all the colors of the wind
+set t_Co=256       " paint with all the colors of the wind
 set hidden         " really, i'm coming right back
+set colorcolumn=80
 let mapleader=","  " i hate typing \
 set number
+set foldmethod=indent
+set foldlevelstart=99
+
+" colors
 syntax enable
 set background=dark
 colorscheme solarized
+
 let g:Powerline_symbols = 'fancy'
 
 " leader mappings
@@ -75,7 +81,6 @@ map <leader>ack <Esc>:Ack!
 map <leader>a :Tabularize /
 map <leader>ae :Tabularize /=<CR>
 map <leader>ac :Tabularize /:<CR>
-map <leader>w :MiniBufExplorer<CR>
 map <leader>r <c-r>
 map <leader>nodos :%s/\r\(\n\)/\1/g<CR>
 map <leader>T :CommandTFlush<CR>
@@ -85,6 +90,12 @@ map <leader>d <c-w>j
 map <leader>e <c-w>k
 map <leader>f <c-w>l
 map <leader>s <c-w>h
+
+"map <leader>t :FufFile<CR> command-T has the best file search
+map <leader>b :FufBuffer<CR>
+map <leader>j :FufJumpList<CR>
+map <leader>l :FufLine<CR>
+map <leader>m :marks<CR>
 
 " dictionaries
 au FileType javascript setlocal dictionary+=$HOME/.vim/bundle/vim-node/dict/node.dict
@@ -99,6 +110,7 @@ set smartcase
 
 " let's ignore some files
 :set wildignore +=.git,node_modules/**,docs/**,**.png,**.jpg,**vendor/**
+"let g:CommandTMatchWindowAtTop = 1
 let g:CommandTMaxHeight = 10
 let g:CommandTMinHeight = 10
 
