@@ -8,6 +8,8 @@ export PATH=/usr/local/share/python:$PATH
 export PYTHONPATH="$PYTHONPATH:$(brew --prefix)/lib/python2.7/site-packages"
 
 # virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+#export PROJECT_HOME=$HOME/repo:$HOME/sandbox
 source /usr/local/bin/virtualenvwrapper.sh
 
 ### alias #################################################
@@ -23,11 +25,12 @@ alias gpush="git push"
 alias gpull="git pull"
 alias gpushtags="git push --tags"
 
+alias copy='pbcopy <'
 alias ..='cd ..'
 alias l='ls -l'
 alias la='ls -la'
 alias icanhaz='brew install'
-alias ppj='python -mjson.tool'
+alias ppj='python -m json.tool'
 alias stripformat='pbpaste | pbcopy'
 
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
@@ -53,3 +56,6 @@ for f in $(command ls ~/.node-completion); do
   test -f "$f" && . "$f"
 done
 # }}}
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
