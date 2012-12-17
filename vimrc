@@ -92,7 +92,7 @@ map <leader>f <c-w>l
 map <leader>s <c-w>h
 
 "map <leader>t :FufFile<CR> command-T has the best file search
-map <leader>b :FufBuffer<CR>
+"map <leader>b :FufBuffer<CR>
 map <leader>j :FufJumpList<CR>
 map <leader>l :FufLine<CR>
 map <leader>m :marks<CR>
