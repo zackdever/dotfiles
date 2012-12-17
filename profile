@@ -6,6 +6,7 @@ export PATH="$PATH:/opt/android-sdk-macosx/tools:/opt/android-sdk-macosx/platfor
 export PATH="/usr/local/bin:$PATH"
 export PATH=/usr/local/share/python:$PATH
 export PYTHONPATH="$PYTHONPATH:$(brew --prefix)/lib/python2.7/site-packages"
+export PATH=$PATH:/usr/local/sbin
 
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
