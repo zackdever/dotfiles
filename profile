@@ -42,7 +42,10 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # ref: http://www.ibm.com/developerworks/linux/library/l-tip-prompt/
-export PS1="\u@\h \[\e[37m\]\W \[\e[36m\]$ \[\e[0m\]"
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+export PS1="\u@\h \[\e[37m\]\W \[\e[36m\]\$(parse_git_branch)$ \[\e[0m\]"
 set -o vi
 
 ### source ################################################
