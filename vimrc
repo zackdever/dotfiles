@@ -19,24 +19,27 @@ Bundle 'gmarik/vundle'
 
 " my Bundles here ---------------------
 Bundle 'zever/vim-colors-solarized'
-Bundle 'digitaltoad/vim-jade'
+"Bundle 'digitaltoad/vim-jade'
+Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'ervandew/supertab'
-Bundle 'fs111/pydoc.vim'
+"Bundle 'fs111/pydoc.vim'
 Bundle 'godlygeek/tabular'
-Bundle 'guileen/vim-node'
+Bundle 'groenewege/vim-less'
+"Bundle 'guileen/vim-node'
 Bundle 'kchmck/vim-coffee-script'
+"Bundle 'klen/python-mode'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'mattn/zencoding-vim'
+"Bundle 'mattn/zencoding-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'mitechie/pyflakes-pathogen'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-haml'
+"Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'wavded/vim-stylus'
+"Bundle 'wavded/vim-stylus'
 " end my Bundles ----------------------
 
 " original repos on github
@@ -84,6 +87,7 @@ map <leader>ac :Tabularize /:<CR>
 map <leader>r <c-r>
 map <leader>nodos :%s/\r\(\n\)/\1/g<CR>
 map <leader>T :CommandTFlush<CR>
+map <leader>gg :Glgrep 
 
 " nav mappings
 map <leader>d <c-w>j
@@ -91,8 +95,8 @@ map <leader>e <c-w>k
 map <leader>f <c-w>l
 map <leader>s <c-w>h
 
-"map <leader>t :FufFile<CR> command-T has the best file search
-"map <leader>b :FufBuffer<CR>
+map <leader>t :FufFile<CR>
+map <leader>b :FufBuffer<CR>
 map <leader>j :FufJumpList<CR>
 map <leader>l :FufLine<CR>
 map <leader>m :marks<CR>
@@ -121,7 +125,7 @@ set smarttab
 au FileType make setlocal noexpandtab
 
 " 4 tab width for python
-au FileType python setlocal ts=4 sts=4 sw=4
+"au FileType python setlocal ts=4 sts=4 sw=4
 
 " don't be dumb with <Nul>
 imap <Nul> <Space>
@@ -134,7 +138,10 @@ nmap <Nul> <Nop>
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " trim trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
+
+" open location window after lgrep
+autocmd QuickFixCmdPost *lgrep* lopen
 
 " remove the vertical dashes in split windows
 :set fillchars-=vert:\|
@@ -143,4 +150,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 if has("gui_running")
   set guioptions=-t
   set guifont=Inconsolata-dz\ for\ Powerline:h12
+  highlight ExtraWhitespace ctermbg=red guibg=#aa0000
 endif
