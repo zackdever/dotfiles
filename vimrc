@@ -144,3 +144,6 @@ if has("gui_running")
   set guioptions=-t
   set guifont=Inconsolata-dz\ for\ Powerline:h12
 endif
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
