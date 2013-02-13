@@ -88,6 +88,7 @@ map <leader>r <c-r>
 map <leader>nodos :%s/\r\(\n\)/\1/g<CR>
 map <leader>T :CommandTFlush<CR>
 map <leader>gg :Glgrep 
+map <leader>h :set hlsearch!<CR>
 
 " nav mappings
 map <leader>d <c-w>j
