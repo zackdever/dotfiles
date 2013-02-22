@@ -21,11 +21,14 @@ Bundle 'gmarik/vundle'
 Bundle 'zever/vim-colors-solarized'
 "Bundle 'digitaltoad/vim-jade'
 Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
-"Bundle 'fs111/pydoc.vim'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'fs111/pydoc.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'groenewege/vim-less'
 "Bundle 'guileen/vim-node'
+"Bundle 'lambdalisue/vim-django-support'
 Bundle 'kchmck/vim-coffee-script'
 "Bundle 'klen/python-mode'
 Bundle 'Lokaltog/vim-powerline'
@@ -38,6 +41,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 "Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
+"Bundle 'vim-scripts/TaskList.vim'
 Bundle 'vim-scripts/The-NERD-tree'
 "Bundle 'wavded/vim-stylus'
 " end my Bundles ----------------------
@@ -127,6 +131,10 @@ au FileType make setlocal noexpandtab
 
 " 4 tab width for python
 "au FileType python setlocal ts=4 sts=4 sw=4
+let g:pydoc_open_cmd = 'vsplit'
+let g:jedi#pydoc = ';'
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#rename_command = "<leader>ppppppppppppp" " never rename, it's buggy
 
 " don't be dumb with <Nul>
 imap <Nul> <Space>

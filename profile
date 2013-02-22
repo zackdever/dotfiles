@@ -4,6 +4,8 @@
 export PATH="/usr/local/bin:$PATH"
 export PATH=/usr/local/share/python:$PATH
 export PYTHONPATH="$PYTHONPATH:$(brew --prefix)/lib/python2.7/site-packages"
+export PYTHONPATH="$PYTHONPATH:$HOME/lib/python/"
+export PYTHONPATH="$PYTHONPATH:$HOME/repo/rdio/contrib"
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/usr/local/mysql/bin
 export PATH=$PATH:/usr/local/opt/arcanist/bin
@@ -32,6 +34,7 @@ alias gpull="git pull"
 alias gpushtags="git push --tags"
 #git diff --name-only master <branch> // List of the changed files
 
+alias arcpaste='arc paste | copyarcpaste'
 alias runserver='./manage.py runcpdebug 0.0.0.0:8000'
 alias copy='pbcopy <'
 alias ..='cd ..'
