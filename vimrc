@@ -41,6 +41,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 "Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
+Bundle 'vim-scripts/taglist.vim'
 "Bundle 'vim-scripts/TaskList.vim'
 Bundle 'vim-scripts/The-NERD-tree'
 "Bundle 'wavded/vim-stylus'
@@ -95,7 +96,7 @@ map <leader>gg :Glgrep
 map <leader>h :set hlsearch!<CR>
 
 " nav mappings
-map <leader>d <c-w>j
+map <leader>dd <c-w>j
 map <leader>e <c-w>k
 map <leader>f <c-w>l
 map <leader>s <c-w>h
@@ -134,6 +135,7 @@ au FileType make setlocal noexpandtab
 let g:pydoc_open_cmd = 'vsplit'
 let g:jedi#pydoc = ';'
 let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#get_definition_command = "<leader>d" "<leader>d is default
 let g:jedi#rename_command = "<leader>ppppppppppppp" " never rename, it's buggy
 
 " don't be dumb with <Nul>
@@ -142,6 +144,8 @@ map  <Nul> <Nop>
 vmap <Nul> <Nop>
 cmap <Nul> <Nop>
 nmap <Nul> <Nop>
+
+let Tlist_Auto_Open = 1
 
 " for milesza/ack.vim
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -154,6 +158,10 @@ autocmd QuickFixCmdPost *lgrep* lopen
 
 " remove the vertical dashes in split windows
 :set fillchars-=vert:\|
+
+" jedi tricks
+let g:jedi#popup_on_dot = 0
+let g:jedi#show_function_definition = 0
 
 " no ugly
 if has("gui_running")
