@@ -76,7 +76,7 @@ set foldlevelstart=99
 " colors
 syntax enable
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 let g:Powerline_symbols = 'fancy'
 

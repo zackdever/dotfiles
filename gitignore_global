@@ -7,8 +7,6 @@ Thumbs.db
 
 # editor generated files #
 ##########################
-*.project
-*.pydevproject
 *.tmp
 *~
 *.swp
