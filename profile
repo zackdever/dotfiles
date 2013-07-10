@@ -36,6 +36,7 @@ alias la='ls -la'
 alias icanhaz='brew install'
 alias ppj='python -m json.tool'
 alias stripformat='pbpaste | pbcopy'
+alias np='rdio current "%{artist} ♫  %{track} – %{album}"'
 
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
