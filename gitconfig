@@ -17,3 +17,5 @@
 [alias]
 	unstage = reset HEAD --
 	discard-changes = checkout --
+[push]
+	default = simple

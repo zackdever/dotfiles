@@ -6,7 +6,9 @@ export PATH="$PATH:/opt/android-sdk-macosx/tools:/opt/android-sdk-macosx/platfor
 export PATH="/usr/local/bin:$PATH"
 export PATH=/usr/local/share/python:$PATH
 export PYTHONPATH="$PYTHONPATH:$(brew --prefix)/lib/python2.7/site-packages"
+export PATH=$PATH:/usr/local/Cellar/ruby/1.9.3-p327/bin
 export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:$HOME/bin
 
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
@@ -16,6 +18,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 ### alias #################################################
 # git
 alias git="hub"
+alias gg="git grep -n --break --heading"
 alias ga="git add"
 alias gs="git status -sb"
 alias gd="git diff"
@@ -45,7 +48,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-export PS1="\u@\h \[\e[37m\]\W \[\e[36m\]\$(parse_git_branch)$ \[\e[0m\]"
+export PS1="\u@\h \[\e[37m\]\W \[\e[36m\]\$(parse_git_branch)» \[\e[0m\]"
 set -o vi
 
 ### source ################################################
