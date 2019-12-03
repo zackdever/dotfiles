@@ -53,7 +53,9 @@ set smartcase
 nmap <Leader>t :GFiles<CR> 
 nmap <Leader>F :Files<CR>
 nmap <Leader>b :Buffers<CR>
-nmap <Leader>h :History:<CR>
+nmap <Leader>H :History:<CR>
+
+map <leader>h :set hlsearch!<CR>
 
 let g:airline_powerline_fonts = 1
 " remove the vertical dashes in split windows

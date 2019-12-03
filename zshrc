@@ -19,7 +19,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-antigen theme pygmalion
+antigen theme agnoster
+#antigen theme pygmalion
 # antigen theme robbyrussell
 
 # Tell Antigen that you're done.
@@ -87,9 +88,6 @@ gpip3(){
 #alias lein="LEIN_USE_BOOTCLASSPATH=no lein"
 export LEIN_USE_BOOTCLASSPATH=no
 
-alias gs="git status"
-alias gd="git diff"
-
 ## History file configuration
 # [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=50000
@@ -106,6 +104,7 @@ setopt inc_append_history     # add commands to HISTFILE in order of execution
 setopt share_history          # share command history data
 
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+alias stripformat='pbpaste | pbcopy'
 
 # git
 alias gg="git grep -n --break --heading"
